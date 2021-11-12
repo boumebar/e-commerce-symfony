@@ -3,4 +3,32 @@
 {% block title %}Accueil
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+	<h1 class="mb-4 text-center">Nos produits</h1>
+	{% for i in 1..3 %}
+		<div class="row mb-3">
+			{% for i in 1..3 %}
+				<div class="col">
+					<div class="card">
+						<img src="https://picsum.photos/300/200" class="img-fluid" alt="">
+						<div class="card-body">
+							<h4 class="card-title">Lorem, ipsum dolor.</h4>
+							<p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, error!</p>
+							<a href="#" class="btn btn-primary btn-sm">Détails</a>
+							<a href="#" class="btn btn-success btn-sm">Ajouter</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+	<hr>
+	<h2 class="text-center">Un service irréprochable</h2>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus est quae aperiam deserunt ad perspiciatis quos debitis, fugit placeat iusto?</p>
+
+	<div class="row">
+		{% include "shared/_assurance.html.twig" with {"color" : "primary", "icon" : "truck", "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus"} %}
+		{% include "shared/_assurance.html.twig" with {"color" : "success", "icon" : "check", "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus"} %}
+		{% include "shared/_assurance.html.twig" with {"color" : "warning", "icon" : "lock", "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus"} %}
+	</div>
+{% endblock %}
