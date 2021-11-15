@@ -35,7 +35,7 @@ class AppFixtures extends Fixture
 
             for ($p = 0; $p < mt_rand(15, 20); $p++) {
                 $product = new Product;
-                $product->setName($faker->mobilePhones())
+                $product->setName($faker->mobilePhones() . mt_rand(1, 100))
                     ->setPrice($faker->price())
                     ->setSlug(strtolower($this->slugger->slug($product->getName())))
                     ->setCategory($category)
