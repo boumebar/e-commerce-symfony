@@ -55,6 +55,7 @@ class ProductController extends AbstractController
      */
     public function edit(int $id, ProductRepository $productRepository, Request $request, EntityManagerInterface $em)
     {
+
         $product = $productRepository->find($id);
         if (!$product) {
             throw $this->createNotFoundException("Cette article n'existe pas !!");
