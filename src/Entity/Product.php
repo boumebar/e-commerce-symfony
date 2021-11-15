@@ -65,7 +65,7 @@ class Product
         return $this->name;
     }
 
-    public function setName(?string $name): self
+    public function setName(string $name): self
     {
         $this->name = $name;
 
@@ -77,7 +77,7 @@ class Product
         return $this->price;
     }
 
-    public function setPrice(?int $price): self
+    public function setPrice(int $price): self
     {
         $this->price = $price;
 
@@ -89,7 +89,7 @@ class Product
         return $this->slug;
     }
 
-    public function setSlug(?string $slug): self
+    public function setSlug(string $slug): self
     {
         $this->slug = $slug;
 
@@ -113,7 +113,7 @@ class Product
         return $this->mainPicture;
     }
 
-    public function setMainPicture(?string $mainPicture): self
+    public function setMainPicture(string $mainPicture): self
     {
         $this->mainPicture = $mainPicture;
 
@@ -125,7 +125,7 @@ class Product
         return $this->shortDescription;
     }
 
-    public function setShortDescription(?string $shortDescription): self
+    public function setShortDescription(string $shortDescription): self
     {
         $this->shortDescription = $shortDescription;
 
