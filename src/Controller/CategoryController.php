@@ -14,6 +14,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class CategoryController extends AbstractController
 {
 
+
     /**
      * @Route("/admin/category/create", name="category_create")
      */

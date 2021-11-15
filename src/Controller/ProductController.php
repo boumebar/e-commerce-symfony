@@ -15,6 +15,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ProductController extends AbstractController
 {
+
     /**
      * @Route("/{slug}", name="product_category")
      */
