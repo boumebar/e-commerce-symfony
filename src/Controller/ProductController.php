@@ -36,7 +36,6 @@ class ProductController extends AbstractController
     public function show($slug, $category_slug, ProductRepository $productRepository)
     {
         $product = $productRepository->findOneBy(['slug' => $slug]);
-        dump($product);
 
         if ($category_slug != $product->getCategory()->getSlug()) {
             throw $this->createNotFoundException("Cette catégorie n'existe pas !");
